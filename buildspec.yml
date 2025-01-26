@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies
+      - yum install -y httpd  # Example: installing Apache
+  build:
+    commands:
+      - echo Building the application (no actual build required for static files)
+      - echo "Build step complete"
+  post_build:
+    commands:
+      - echo Preparing build artifacts
+      - echo "Post-build step complete"
+
+artifacts:
+  files:
+    - '**/*'  # Include all files from the source repository
+  discard-paths: no  # Maintain the file structure

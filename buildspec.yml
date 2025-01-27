@@ -7,9 +7,7 @@ phases:
   build:
     commands:
       - if grep -q "sami" index.html; then :; else exit 1; fi
-  post_build:
-    commands:
-      - :
+
 artifacts:
   files:
     - '**/*'
